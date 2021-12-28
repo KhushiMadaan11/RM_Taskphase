@@ -1,0 +1,48 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int x;
+    int y;
+    cout <<"enter no. of rows for matrice " << endl ;
+    cin >> x;
+    cout <<"enter no. of columns for matrice " << endl;
+    cin >> y;
+
+    int mat[x][y];
+
+    for(int i=0; i<x; i++){
+        for(int j=0; j<y; j++){
+            cout <<"enter element" <<endl ;
+            cin >> mat[i][j];
+        }
+    }
+
+    for(int r=0; r<x; r++){
+        for(int c=0; c<y; c++){
+            cout << mat[r][c] <<" " ;}
+        cout << endl;}
+
+    int i0=0;
+    int j0=0;
+    for(int i=0; i<x; i++){
+        for(int j=0; j<y; j++){
+            if(mat[i][j]==0){
+                i0=i;
+                j0=j;}
+        }
+    }
+
+    for(int i=0; i<x; i++){
+        mat[i][j0]=0;}
+    for(int j=0; j<y; j++){
+        mat[i0][j]=0;}
+
+    for(int r=0; r<x; r++){
+        for(int c=0; c<y; c++){
+            cout << mat[r][c] <<" " ;}
+        cout << endl;}
+}
+
